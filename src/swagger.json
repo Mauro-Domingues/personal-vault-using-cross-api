@@ -1,0 +1,1279 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"User": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updated_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deleted_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"clientID": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"created_at",
+					"updated_at",
+					"deleted_at",
+					"name",
+					"email",
+					"password",
+					"clientID"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponseDTO_User_": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/User"
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IUserDTO": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"clientID": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updated_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deleted_at": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"required": [
+					"email",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IListDTO_User_": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"pagination": {
+						"properties": {
+							"lastPage": {
+								"type": "number",
+								"format": "double"
+							},
+							"perPage": {
+								"type": "number",
+								"format": "double"
+							},
+							"page": {
+								"type": "number",
+								"format": "double"
+							},
+							"total": {
+								"type": "number",
+								"format": "double"
+							}
+						},
+						"required": [
+							"lastPage",
+							"perPage",
+							"page",
+							"total"
+						],
+						"type": "object"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/User"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"pagination",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponseDTO_null_": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "number",
+						"enum": [
+							null
+						],
+						"nullable": true
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponseDTO__jwt_token-string--refresh_token%3F%3Astring--__": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"properties": {
+							"refresh_token": {
+								"type": "string"
+							},
+							"jwt_token": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"jwt_token"
+						],
+						"type": "object"
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IAuthDTO": {
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"refresh_token": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"items": {
+									"type": "string"
+								},
+								"type": "array"
+							}
+						]
+					},
+					"ip": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"email",
+					"password",
+					"ip"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_User.Exclude_keyofUser.password__": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"clientID": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updated_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deleted_at": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"required": [
+					"name",
+					"email",
+					"clientID",
+					"id",
+					"created_at",
+					"updated_at",
+					"deleted_at"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"Omit_User.password_": {
+				"$ref": "#/components/schemas/Pick_User.Exclude_keyofUser.password__",
+				"description": "Construct a type with the properties of T except for those in type K."
+			},
+			"IResponseDTO_Omit_User.password__": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/Omit_User.password_"
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"File": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updated_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deleted_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"file_url": {
+						"type": "string",
+						"nullable": true
+					},
+					"file": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"created_at",
+					"updated_at",
+					"deleted_at",
+					"file_url",
+					"file",
+					"name"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponseDTO_File_": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/File"
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IFileDTO": {
+				"properties": {
+					"file_url": {
+						"type": "string",
+						"nullable": true
+					},
+					"file": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					},
+					"created_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"updated_at": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"deleted_at": {
+						"type": "string",
+						"format": "date-time"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IListDTO_File_": {
+				"properties": {
+					"code": {
+						"type": "number",
+						"format": "double"
+					},
+					"message_code": {
+						"type": "string",
+						"enum": [
+							"FAILED_TO_CREATE_NOTIFICATION",
+							"FAILED_TO_CREATE_LEAD",
+							"FAILED_TO_GET_SESSION",
+							"INVALID_DELAY_FORMAT",
+							"EMAIL_ALREADY_EXISTS",
+							"TOO_MANY_REQUESTS",
+							"FAILED_TO_CREATE",
+							"FAILED_TO_LIST",
+							"FILE_NOT_FOUND",
+							"INVALID_LOGIN",
+							"INVALID_TOKEN",
+							"AUTHENTICATED",
+							"NOT_EXISTS",
+							"NOT_FOUND",
+							"FORBIDDEN",
+							"CREATED",
+							"UPDATED",
+							"DELETED",
+							"PATCHED",
+							"LISTED",
+							"FOUND"
+						]
+					},
+					"message": {
+						"type": "string"
+					},
+					"pagination": {
+						"properties": {
+							"lastPage": {
+								"type": "number",
+								"format": "double"
+							},
+							"perPage": {
+								"type": "number",
+								"format": "double"
+							},
+							"page": {
+								"type": "number",
+								"format": "double"
+							},
+							"total": {
+								"type": "number",
+								"format": "double"
+							}
+						},
+						"required": [
+							"lastPage",
+							"perPage",
+							"page",
+							"total"
+						],
+						"type": "object"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/File"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"code",
+					"message_code",
+					"message",
+					"pagination",
+					"data"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"RSA_JWK": {
+				"properties": {
+					"kty": {
+						"type": "string"
+					},
+					"n": {
+						"type": "string"
+					},
+					"e": {
+						"type": "string"
+					},
+					"d": {
+						"type": "string"
+					},
+					"p": {
+						"type": "string"
+					},
+					"q": {
+						"type": "string"
+					},
+					"dp": {
+						"type": "string"
+					},
+					"dq": {
+						"type": "string"
+					},
+					"qi": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"kty",
+					"n",
+					"e"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"JWK__use-string--__": {
+				"allOf": [
+					{
+						"$ref": "#/components/schemas/RSA_JWK"
+					},
+					{
+						"properties": {
+							"use": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"use"
+						],
+						"type": "object"
+					}
+				]
+			}
+		},
+		"securitySchemes": {
+			"guardRouter": {
+				"type": "http",
+				"scheme": "bearer",
+				"bearerFormat": "jwt",
+				"description": "Don't need to incude 'Bearer' keyword."
+			}
+		}
+	},
+	"info": {
+		"title": "Awesome API",
+		"version": "1.0.0",
+		"description": "An awesome API created using cross-api",
+		"contact": {
+			"email": "example@mail.com",
+			"name": "Your Name Here",
+			"url": "https://example.com.br"
+		}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/users": {
+			"post": {
+				"operationId": "CreateUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_User_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IUserDTO"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "ListUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IListDTO_User_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "page",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/users/{id}": {
+			"get": {
+				"operationId": "ShowUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_User_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "UpdateUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_User_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IUserDTO"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_null_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/login": {
+			"post": {
+				"operationId": "AuthenticateUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO__jwt_token-string--refresh_token%3F%3Astring--__"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IAuthDTO"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/password-reset/{token}": {
+			"post": {
+				"operationId": "ResetPasswordService",
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "token",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/password-forgot": {
+			"post": {
+				"operationId": "SendForgotPasswordEmailService",
+				"responses": {
+					"204": {
+						"description": "No content"
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/me": {
+			"get": {
+				"operationId": "ShowSelfUserService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_Omit_User.password__"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"User"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/files": {
+			"post": {
+				"operationId": "CreateFileService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_File_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"File"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"$ref": "#/components/schemas/IFileDTO"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "ListFileService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IListDTO_File_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"File"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "page",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					},
+					{
+						"in": "query",
+						"name": "limit",
+						"required": true,
+						"schema": {
+							"format": "double",
+							"type": "number"
+						}
+					}
+				]
+			}
+		},
+		"/files/{id}": {
+			"get": {
+				"operationId": "ShowFileService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_File_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"File"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"put": {
+				"operationId": "UpdateFileService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_File_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"File"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"$ref": "#/components/schemas/IFileDTO"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteFileService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseDTO_null_"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"File"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/generate-keys": {
+			"get": {
+				"operationId": "GenerateKeyService",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/JWK__use-string--__"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"System"
+				],
+				"security": [
+					{
+						"guardRouter": []
+					}
+				],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "http://localhost:3333/"
+		},
+		{
+			"url": "https://your-production-domain.com",
+			"description": "Api Production"
+		}
+	],
+	"consumes": [
+		"application/json",
+		"multipart/form-data"
+	],
+	"produces": [
+		"application/json"
+	]
+}

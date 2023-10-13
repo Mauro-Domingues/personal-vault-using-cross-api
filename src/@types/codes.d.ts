@@ -1,0 +1,25 @@
+/**
+* @description Add your message codes here
+*/
+declare type messageCode =
+  | 'FAILED_TO_CREATE_NOTIFICATION'
+  | 'FAILED_TO_CREATE_LEAD'
+  | 'FAILED_TO_GET_SESSION'
+  | 'INVALID_DELAY_FORMAT'
+  | 'EMAIL_ALREADY_EXISTS'
+  | 'TOO_MANY_REQUESTS'
+  | 'FAILED_TO_CREATE'
+  | 'FAILED_TO_LIST'
+  | 'FILE_NOT_FOUND'
+  | 'INVALID_LOGIN'
+  | 'INVALID_TOKEN'
+  | 'AUTHENTICATED'
+  | 'NOT_EXISTS'
+  | 'NOT_FOUND'
+  | 'FORBIDDEN'
+  | 'CREATED'
+  | 'UPDATED'
+  | 'DELETED'
+  | 'PATCHED'
+  | 'LISTED'
+  | 'FOUND';
